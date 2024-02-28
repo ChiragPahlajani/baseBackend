@@ -100,19 +100,26 @@ const activateUser=(async(req,res,next)=>{
 })
 const loginUser=(async(req,res,next)=>{
     try{
+        console.log("Hello");
         const {email,password}=req.body;
+        console.log(typeof email);
         if(!email||!password){
+          
             return next(new ErrorHandler("Please Enter email and Password",400));
         }
-        const user=await userModel.findOne({email}).select("+password");
+        const user=await userModel.findOne({email:email}).select("+password");
+      
         if(!user){
             return next(new ErrorHandler("Invalid email or password",400))
         }
+          
         const isPasswordMatch=await user.comparePassword(password)
+        console.log(user);
         if(!isPasswordMatch){
+            
             return next(new ErrorHandler("Invalid email or password",400))
         }
-       
+        console.log(user);
         sendToken(user,200,res)
 
     }
@@ -137,9 +144,9 @@ const logOutUser=(async(req,res,next)=>{
 })
 const updateAccessToken=(async(req,res,next)=>{
     try{
+       
         const refresh_token=req.cookies.refresh_token
-        
-        
+        console.log("ewdf",refresh_token);
         const decoded=jwt.verify(refresh_token,
             process.env.REFRESH_TOKEN)
           

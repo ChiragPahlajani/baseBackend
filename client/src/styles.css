@@ -4,6 +4,8 @@
     margin: 0;
 }
 body{
-    background-image: linear-gradient(to bottom, #111827, black);
+    background-image: linear-gradient(to bottom, #111827, black); 
    
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

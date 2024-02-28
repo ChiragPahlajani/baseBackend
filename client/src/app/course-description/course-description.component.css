@@ -2,6 +2,9 @@ body{
     background: linear-gradient(to bottom, #111827, black);
     background-repeat: no-repeat;
 }
+.spanDistance{
+    padding-left: 5%;
+}
 .course_one{
     width: 90%;
 margin-left: auto;
@@ -102,6 +105,7 @@ padding: 0.5rem;
 display: inline-block; 
 word-wrap: break-word; 
 color: white;
+padding-left: 10px;
 }
 .course_seven_four{
     padding-left: 2rem; 
@@ -132,6 +136,7 @@ cursor: pointer;
     font-family: Poppins;
     color: #fff;
     font-size: 25px;
+    display: contents;
 
 }
 .course_nine{
@@ -140,6 +145,7 @@ cursor: pointer;
 }
 .course_nine_one{
     display: flex;
+    padding: 20px;
 }
 .course_nine_two{
     width: 50px;
@@ -152,7 +158,7 @@ cursor: pointer;
     border-width: 1px; 
     border-color: #44c67d;
     max-width: 100%;
-    margin-top: 15px;
+    
 }
 .course_nine_three{
     padding-left: 0.5rem;
@@ -173,9 +179,11 @@ cursor: pointer;
     display: flex;
     margin-top: 0.25rem;
     margin-left: 0.5rem;
+    padding: 5px;
 }
 .course-nine_seven,.course_nine_eight{
     color: white;
+    padding: 5px;
 }
 
 .course_nine_nine{

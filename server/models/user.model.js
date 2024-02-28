@@ -51,6 +51,7 @@ userSchema.pre('save', async function (next) {
     next();
 })
 userSchema.methods.comparePassword = async function (enteredPassword) {
+    console.log(enteredPassword);
     return await bcrypt.compare(enteredPassword, this.password);
 }
 userSchema.methods.SignAccessToken=function(){

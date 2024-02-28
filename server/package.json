@@ -95,6 +95,7 @@
     "negotiator": "^0.6.3",
     "node-cron": "^3.0.3",
     "nodemailer": "^6.9.9",
+    "nodemon": "^3.1.0",
     "object-assign": "^4.1.1",
     "object-inspect": "^1.13.1",
     "on-finished": "^2.4.1",
@@ -133,7 +134,8 @@
     "yallist": "^4.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",

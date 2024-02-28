@@ -1,2 +1,4 @@
-<app-header></app-header>
-<app-course-description></app-course-description>
+<app-header (openLoginModalEvent)="openLoginModal()"></app-header>
+<app-login  *ngIf="isModalOpen" (switchToSignupClicked)="toggleSignupModal()"></app-login>
+<app-registration *ngIf="signupModalVisible" (switchToLoginClicked)="toggleLoginModal()"></app-registration> 
+<!-- <app-course-description></app-course-description> -->

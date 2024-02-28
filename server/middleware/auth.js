@@ -3,7 +3,9 @@ const ErrorHandler = require("../utils/ErrorHandler")
 const jwt=require("jsonwebtoken")
 const redis =require("../utils/redis")
 const isAuthenticated=(async(req,res,next)=>{
+    console.log(req.cookies.access_token);
     const access_token=req.cookies.access_token
+   
     if(!access_token)
     {
         return next(new ErrorHandler("Please login to access this resource",400))

@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'client';
-}
+  isModalOpen:boolean=false;
+
+  signupModalVisible:boolean=false
+  openLoginModal(){
+    this.isModalOpen= !this.isModalOpen
+    this.signupModalVisible=false
+  }
+  toggleSignupModal() {
+    this.signupModalVisible = !this.signupModalVisible
+    this.isModalOpen= !this.isModalOpen
+  }
+  toggleLoginModal() {
+    this.signupModalVisible = !this.signupModalVisible;
+    this.isModalOpen= !this.isModalOpen;
+    
+  }
+  }
+

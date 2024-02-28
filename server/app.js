@@ -10,10 +10,7 @@ const orderRouter=require("./routes/order.route")
 const notificationRoute=require("./routes/notification.route")
 app.use(express.json({ limit: "50mb" }));
 app.use(cookiesParser());
-app.use(cors({
-    credentials: true,
-    origin: process.env.ORIGIN
-}))
+app.use(cors({ credentials: true, origin: 'http://localhost:3000'}))
 const cloudinary=require("cloudinary")
 const connectDb = require("./utils/db");
 const multer = require("multer");
